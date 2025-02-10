@@ -35,8 +35,8 @@ html, body {
 }
 /* font de grid inicial */
 .gif-box h2 {
-  font-size: 1.05rem;
-  margin: 0 0 2.8px 0;
+  font-size: 0.8rem;
+  margin: 0 0 1px 0;
   color: #ffffff;
   text-align: left;
 }
@@ -80,7 +80,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 99vh;    
-  padding: 5px;
+  padding: 10px;
   box-sizing: border-box;
   pointer-events: none;
   z-index: 2;
@@ -111,8 +111,8 @@ html, body {
 @media (max-width: 768px) {
   
   .floating-images {
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(6, auto);     
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(9, auto);     
     position: relative; 
     height: auto;
     overflow: auto;
