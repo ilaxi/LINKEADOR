@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", function() {
               floatingImages.style.display = "grid"; 
               floatingImages.classList.add("animate__animated", "animate__fadeIn");
               floatingImages.style.setProperty('--animate-duration', '0.5s');
-            }, 700);
+            }, 400);
           }, { once: true });
-        }, 3000); // duración del mensaje
-      }, 700); // tiempo de pantalla negra inicial
+        }, 2000); // duración del mensaje
+      }, 400); // tiempo de pantalla negra inicial
     }, { once: true });
   });
 });

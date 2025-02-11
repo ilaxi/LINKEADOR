@@ -5,11 +5,12 @@ html, body {
   background-color: #000000 !important;
   overflow: auto;
 }
+
 /* container de grid inicial */
 #boxesContainer {
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr); /* Cambiado de "auto" a "1fr" para que se expandan las celdas */
+  gap: 13px;
   padding: 10px;
   background-color: #000000;
   position: absolute;
@@ -17,6 +18,7 @@ html, body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 /* diseño de grid inicial */
 .gif-box {
   background: transparent;
@@ -31,24 +33,30 @@ html, body {
   justify-content: center;
 }
 .gif-box:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
+
 /* font de grid inicial */
 .gif-box h2 {
-  font-size: 0.8rem;
-  margin: 0 0 1px 0;
+  font-size: 1rem;
+  margin: 0 0 1.2px 0;
   color: #ffffff;
   text-align: left;
 }
-/* Relación de aspecto imagenes de grid inicial */
+
+/* Relación de aspecto imágenes de grid inicial */
+/*
+   Para agrandar (o reducir) los GIFs del grid inicial,
+   puedes modificar aquí el comportamiento de las imágenes.
+   En esta versión se fuerza que la imagen ocupe el 100% del ancho de su celda.
+*/
 .gif-box img {
-  max-width: 100%;
-  max-height: 300px;
-  width: auto;
-  height: auto;
+  width: 170px;       /* Ahora la imagen ocupará todo el ancho de la celda */
+  height: auto;      /* Mantiene su proporción */
   object-fit: contain;
 }
-/* msjs overlay style */
+
+/* Overlay para mensajes */
 #overlay {
   position: fixed;
   top: 0;
@@ -62,19 +70,21 @@ html, body {
   align-items: center;
   color: #fff;
 }
+
 /* font de msj de dp */
 #overlayMessage {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
 }
+
 /* Imágenes del grid del final */
 .floating-images {
   display: grid;
   grid-template-columns: repeat(6, 1fr); 
   grid-template-rows: repeat(3, 0.8fr);    
   row-gap: 35px;   
-  column-gap: 0;    /* separación horizontal, no funca btw */
+  column-gap: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -84,9 +94,10 @@ html, body {
   box-sizing: border-box;
   pointer-events: none;
   z-index: 2;
-  display: none;   
-  overflow: auto;  
+  display: none;
+  overflow: auto;
 }
+
 .floating-image {
   pointer-events: none;
   transition: transform 0.3s ease;
@@ -94,26 +105,27 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 1 / 1;  
+  aspect-ratio: 1 / 1;
   position: relative;
 }
+
 .floating-image img {
   pointer-events: auto;
   width: 90%;  
   height: 87%;  
-  object-fit: cover; 
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 .floating-image img:hover {
   transform: scale(1.08);
 }
-/* optimización de espacio para celus (cambiar grid a 3 columnas y 6 filas */
+
+/* Media Query para dispositivos móviles: 3 columnas y 6 filas, permitiendo scroll */
 @media (max-width: 768px) {
-  
   .floating-images {
     grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: repeat(9, auto);     
-    position: relative; 
+    position: relative;
     height: auto;
     overflow: auto;
   }
