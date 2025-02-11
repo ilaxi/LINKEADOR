@@ -51,7 +51,7 @@ html, body {
    En esta versión se fuerza que la imagen ocupe el 100% del ancho de su celda.
 */
 .gif-box img {
-  width: 170px;       /* Ahora la imagen ocupará todo el ancho de la celda */
+  width: 155px;       /* Ahora la imagen ocupará todo el ancho de la celda */
   height: auto;      /* Mantiene su proporción */
   object-fit: contain;
 }
