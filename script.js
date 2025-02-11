@@ -33,3 +33,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }, { once: true });
   });
 });
+
+// pq lees mi codigo negrito

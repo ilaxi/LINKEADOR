@@ -9,7 +9,7 @@ html, body {
 /* container de grid inicial */
 #boxesContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Cambiado de "auto" a "1fr" para que se expandan las celdas */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 13px;
   padding: 10px;
   background-color: #000000;
@@ -45,14 +45,9 @@ html, body {
 }
 
 /* Relación de aspecto imágenes de grid inicial */
-/*
-   Para agrandar (o reducir) los GIFs del grid inicial,
-   puedes modificar aquí el comportamiento de las imágenes.
-   En esta versión se fuerza que la imagen ocupe el 100% del ancho de su celda.
-*/
 .gif-box img {
-  width: 155px;       /* Ahora la imagen ocupará todo el ancho de la celda */
-  height: auto;      /* Mantiene su proporción */
+  width: 155px;   
+  height: auto;      
   object-fit: contain;
 }
 
@@ -120,7 +115,7 @@ html, body {
   transform: scale(1.08);
 }
 
-/* Media Query para dispositivos móviles: 3 columnas y 6 filas, permitiendo scroll */
+/* navegación en celus */
 @media (max-width: 768px) {
   .floating-images {
     grid-template-columns: repeat(2, 1fr); 
