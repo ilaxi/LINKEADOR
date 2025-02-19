@@ -6,7 +6,6 @@ html, body {
   overflow: auto;
 }
 
-/* container de grid inicial */
 #boxesContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
@@ -19,7 +18,7 @@ html, body {
   transform: translate(-50%, -50%);
 }
 
-/* diseño de grid inicial */
+/* Diseño de grid inicial */
 .gif-box {
   background: transparent;
   border: none;
@@ -36,7 +35,6 @@ html, body {
   transform: scale(1.05);
 }
 
-/* font de grid inicial */
 .gif-box h2 {
   font-size: 1rem;
   margin: 0 0 1.2px 0;
@@ -44,14 +42,12 @@ html, body {
   text-align: left;
 }
 
-/* Relación de aspecto imágenes de grid inicial */
 .gif-box img {
   width: 155px;   
   height: auto;      
   object-fit: contain;
 }
 
-/* Overlay para mensajes */
 #overlay {
   position: fixed;
   top: 0;
@@ -66,14 +62,13 @@ html, body {
   color: #fff;
 }
 
-/* font de msj de dp */
 #overlayMessage {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
 }
 
-/* Imágenes del grid del final */
+/* Grid del final */
 .floating-images {
   display: grid;
   grid-template-columns: repeat(6, 1fr); 
@@ -115,7 +110,7 @@ html, body {
   transform: scale(1.08);
 }
 
-/* navegación en celus */
+/* Navegación en celulares */
 @media (max-width: 768px) {
   .floating-images {
     grid-template-columns: repeat(2, 1fr); 
